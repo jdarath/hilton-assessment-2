@@ -1,0 +1,2 @@
+export const TOGGLE_ROOM = "TOOGLE_ROOM";
+export const CHANGE_GUESTS = 'CHANGE_GUESTS';

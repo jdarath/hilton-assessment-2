@@ -1,0 +1,58 @@
+@import 'vars', 'breakpoints';
+
+.rooms-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .room {
+        border-radius: 4px;
+        display: inline-block;
+        font-size: .75rem;
+        margin-bottom: 10px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        min-inline-size: unset;
+        padding: 0;
+        width: 105px;
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+        &.active {
+            background-color: white;
+            border: 2px solid $hgray1;
+            .room_title {
+                background-color: $hgray1;
+                font-weight: bold;
+            }
+        }
+        &.inactive {
+            background-color: $hgray2;
+            border: 2px solid $hgray3;
+        }
+        .room_title {
+            display: flex;
+            padding: 2px 5px;
+            h3 {
+                display: inline;
+                font-size: .75rem;
+                margin: 0;
+            }
+        }
+        .room_guests {
+            border: 0 none;
+            display: flex;
+            font-size: .6875rem;
+            line-height: 1.25;
+            margin: 0;
+            padding: 8px 5px;
+        }
+        .room_guests-gtype {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        select {
+            font-size: .75rem;
+            margin-top: 3px;
+        }
+    }
+}

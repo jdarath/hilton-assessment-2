@@ -1,0 +1,39 @@
+//* General functions and mixins *//
+
+//colors
+$hgray1: #e7e7e7;
+$hgray2: #dbdbe3;
+$hgray3: #cccfe0;
+
+//fonts
+@font-face {
+  font-family: NimbusSans;
+  font-weight: bold;
+  src: url('../assets/NimbusSanL-Bol.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: italic;
+  font-weight: bold;
+  src: url('../assets/NimbusSanL-BolIta.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: normal;
+  src: url('../assets/NimbusSanL-Reg.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: italic;
+  src: url('../assets/NimbusSanL-RegIta.otf');
+}
+$hfont: 'NimbusSans', sans-serif;
+
+//Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

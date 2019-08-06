@@ -1,0 +1,62 @@
+{
+  "name": "hilton-assessment-2",
+  "version": "1.0.0",
+  "description": "Hilton Assessment 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "keywords": [
+    "Hilton",
+    "Assessment"
+  ],
+  "author": "Antonio Salinas",
+  "license": "ISC",
+  "dependencies": {
+    "babel-jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-test-renderer": "^16.8.6",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "react-loadable": "^5.5.0",
+    "redux-mock-store": "^1.5.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdarath/hilton-assessment-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jdarath/hilton-assessment-2/issues"
+  },
+  "homepage": "https://github.com/jdarath/hilton-assessment-2#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    }
+  }
+}
