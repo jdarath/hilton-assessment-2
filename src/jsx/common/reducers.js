@@ -29,7 +29,6 @@ const rooms = (typeof savedRooms == 'undefined' || savedRooms == null)? [
             children: 0
         }
     ] : savedRooms;
-console.log(rooms);
 const initialState = {
     rooms: rooms
 };
@@ -61,7 +60,6 @@ function MainReducer(state = initialState, action) {
     rooms.map((room) => {
         newRooms.push(room);
     })
-    //console.log(rooms);
     return Object.assign({}, state, { rooms: newRooms});
 };
 

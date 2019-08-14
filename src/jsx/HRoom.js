@@ -33,21 +33,21 @@ export class HRoom extends Component {
                 <input type="checkbox" name="room_active" onChange={this.toggleActive} checked={rooms[ix].isActive} />;
 
         return(
-            <fieldset className={rooms[ix].isActive? 'room active' : 'room inactive'}>
-                <div className="room_title">
-                    {chBx} <h3>Room {ix+1}</h3>
-                </div>
-                <div className="room_guests">
-                    <div className="room_guests-gtype">
+            <section className={rooms[ix].isActive? 'room active' : 'room inactive'}>
+                <h3 className="room_title">
+                    {chBx}Room {ix+1}
+                </h3>
+                <form className="room_guests" id={`form_rooms_${ix}`}>
+                    <fieldset className="room_guests-gtype" form={`form_rooms_${ix}`}>
                         <label htmlFor={`adults_${ix}`}>Adults (18+)</label>
                         <HGuests ix={ix} guestType='adults' guestOptions={adults} />
-                    </div>
-                    <div className="room_guests-gtype">
+                    </fieldset>
+                    <fieldset className="room_guests-gtype" form={`form_rooms_${ix}`}>
                         <label htmlFor={`children_${ix}`}>Children (0-17)</label>
                         <HGuests ix={ix} guestType='children' guestOptions={children} />
-                    </div>
-                </div>
-            </fieldset>
+                    </fieldset>
+                </form>
+            </section>
         );
     }
 }

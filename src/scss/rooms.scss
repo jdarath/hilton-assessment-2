@@ -31,12 +31,9 @@
         }
         .room_title {
             display: flex;
+            font-size: .75rem;
+            margin: 0;
             padding: 2px 5px;
-            h3 {
-                display: inline;
-                font-size: .75rem;
-                margin: 0;
-            }
         }
         .room_guests {
             border: 0 none;
@@ -47,12 +44,22 @@
             padding: 8px 5px;
         }
         .room_guests-gtype {
+            border: 0 none;
             display: flex;
             flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
         }
         select {
             font-size: .75rem;
             margin-top: 3px;
+        }
+    }
+    .callToAction {
+        display: block;
+        width: 100%;
+        .alert {
+            margin: .25rem 0;
         }
     }
 }

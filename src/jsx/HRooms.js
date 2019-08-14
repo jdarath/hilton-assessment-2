@@ -29,18 +29,18 @@ export class HRooms extends Component {
         
         const { rooms } = this.props,
             { alertOn } = this.state,
-            alert = alertOn? <div class="alert">✔ Your rooms have been booked!</div> : '';
+            alert = alertOn? <p class="alert">✔ Your rooms have been booked!</p> : '';
         return(
-            <main>
-                <form className="rooms-wrapper">
-                    {
-                        rooms.map((room, k) => {
-                            return <HRoom ix={k} key={k} />
-                        })
-                    }
-                </form>
-                {alert}
-                <button onClick={this.saveRooms}>Submit</button>
+            <main className="rooms-wrapper" id="form_rooms">
+                {
+                    rooms.map((room, k) => {
+                        return <HRoom ix={k} key={k} />
+                    })
+                }
+                <section className="callToAction">
+                    {alert}
+                    <button onClick={this.saveRooms}>Submit</button>
+                </section>
             </main>
         );
     }
